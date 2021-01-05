@@ -3,4 +3,9 @@ project(exercisesC C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(exercisesC main.c)
+file(GLOB files *.c)
+foreach (file ${files})
+    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
+    add_executable(${exe} ${file})
+    message(\ \ \ \ --\ src/${exe}.c\ will\ be\ compiled\ to\ bin/${exe})
+endforeach ()
