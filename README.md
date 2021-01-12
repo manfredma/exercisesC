@@ -2,3 +2,8 @@
 
 # 参考
 [C 教程 - runoob.com](https://www.runoob.com/cprogramming/c-pointers.html)  
+## 专题-内存分配
+[关于内存分配malloc、calloc、realloc的区别](https://zhuanlan.zhihu.com/p/87061787)  
+[Difference between malloc and calloc?](https://stackoverflow.com/questions/1538420/difference-between-malloc-and-calloc)  
+[malloc() vs calloc(): Key Differences explained with Examples](https://www.guru99.com/difference-between-malloc-and-calloc.html)  
+
