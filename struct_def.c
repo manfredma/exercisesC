@@ -129,6 +129,7 @@ int main() {
     strcpy(Book2.subject, "Telecom Billing Tutorial");
     Book2.book_id = 6495700;
 
+
     /* 输出 Book1 信息 */
     printf("Book 1 title : %s\n", Book1.title);
     printf("Book 1 author : %s\n", Book1.author);
