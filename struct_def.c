@@ -111,6 +111,23 @@ void printBook(struct Books book);
 /* 函数声明 */
 void printBookPointer(struct Books *book);
 
+/* 定义简单的结构 */
+struct {
+    unsigned int widthValidated;
+    unsigned int heightValidated;
+} status1;
+
+/* 定义位域结构 */
+struct {
+    unsigned int widthValidated: 1;
+    unsigned int heightValidated: 1;
+} status2;
+
+struct
+{
+    unsigned int age : 3;
+} Age;
+
 int main() {
     printf("title : %s\nauthor: %s\nsubject: %s\nbook_id: %d\n", book.title, book.author, book.subject, book.book_id);
 
@@ -167,6 +184,20 @@ int main() {
     pbit->b &= 3;    /* 使用了复合的位运算符 "&="，相当于：pbit->b=pbit->b&3，位域 b 中原有值为 7，与 3 作按位与运算的结果为 3（111&011=011，十进制值为 3） */
     pbit->c |= 1;    /* 使用了复合位运算符"|="，相当于：pbit->c=pbit->c|1，其结果为 15 */
     printf("%d,%d,%d\n", pbit->a, pbit->b, pbit->c);    /* 用指针方式输出了这三个域的值 */
+
+    printf("Memory size occupied by status1 : %lu\n", sizeof(status1));
+    printf("Memory size occupied by status2 : %lu\n", sizeof(status2));
+
+    Age.age = 4;
+    printf( "Sizeof( Age ) : %lu\n", sizeof(Age) );
+    printf( "Age.age : %d\n", Age.age );
+
+    Age.age = 7;
+    printf( "Age.age : %d\n", Age.age );
+
+    Age.age = 8; // 二进制表示为 1000 有四位，超出
+    printf( "Age.age : %d\n", Age.age );
+
     return 0;
 }
 
