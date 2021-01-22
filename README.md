@@ -2,7 +2,7 @@
 
 ## 数据类型大小
 
-![数据类型实际大小](https://www.runoob.com/wp-content/uploads/2014/09/32-64.jpg "数据类型实际大小")
+<img src="https://www.runoob.com/wp-content/uploads/2014/09/32-64.jpg" style="zoom:50%" alt="数据类型大小">
 
 # 参考
 
