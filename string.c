@@ -23,5 +23,9 @@ int main() {
     size_t len = strlen(str1);
     printf("strlen(str1) :  %zu\n", len);
 
+    int* x = str1;
+
+    printf("xxxx%d\n", x);
+
     return 0;
 }
