@@ -19,9 +19,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef int cal(int, int);
+
+typedef int (*cal2)(int, int);
+
 int max(int x, int y) {
     return x > y ? x : y;
 }
+
+struct f_p {
+    cal *c;
+    cal2 c2;
+};
 
 // 回调函数
 void populate_array(int *array, size_t arraySize, int (*getNextValue)(void)) {
@@ -55,6 +64,14 @@ int main(void) {
         printf("%d ", myarray[i]);
     }
     printf("\n");
+
+    struct f_p f1 = {
+            .c =  max,
+            .c2 = max
+    };
+
+    printf("%d\n", f1.c(10, 12));
+    printf("%d\n", f1.c2(10, 12));
 
     return 0;
 }

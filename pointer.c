@@ -14,6 +14,8 @@
 // 不同数据类型的指针之间唯一的不同是，指针所指向的变量或常量的数据类型不同。
 #include <stdio.h>
 
+enum x {a, b};
+
 int main() {
 
     /* 基本示例 */
@@ -34,5 +36,11 @@ int main() {
     int *ptr = NULL;
 
     printf("ptr 的地址是 %p\n", ptr);
+
+    enum x x= a;
+    x++;
+    printf("x=%d", x);
+
     return 0;
 }
+
