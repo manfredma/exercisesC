@@ -97,13 +97,20 @@ struct B {
     //other members;
 };
 
+struct X {
+    char title[50];
+};
+
 // 和其它类型变量一样，对结构体变量可以在定义时指定初始值。
 struct Books {
     char title[50];
     char author[50];
     char subject[100];
     int book_id;
+    struct X ref;
 } book = {"C 语言", "RUNOOB", "编程语言", 123456};
+
+
 
 /* 函数声明 */
 void printBook(struct Books book);
@@ -145,6 +152,14 @@ int main() {
     strcpy(Book2.author, "Zara Ali");
     strcpy(Book2.subject, "Telecom Billing Tutorial");
     Book2.book_id = 6495700;
+
+    struct X x1 = {"hello"};
+    Book1.ref = x1;
+    Book1.ref.title[0] = 'H';
+
+    printf("Book1 sizeof = %lu\n", sizeof Book1);
+    printf("x1 sizeof = %lu\n", sizeof x1);
+    printf("Book2 sizeof = %lu\n", sizeof Book2);
 
 
     /* 输出 Book1 信息 */
